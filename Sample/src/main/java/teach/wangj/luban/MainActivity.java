@@ -8,6 +8,8 @@ import android.widget.ImageView;
 
 import java.io.File;
 
+import teach.wangjie.luban.Luban;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();

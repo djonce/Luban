@@ -1,4 +1,4 @@
-package teach.wangj.luban;
+package teach.wangjie.luban;
 
 import android.os.Handler;
 import android.os.Looper;

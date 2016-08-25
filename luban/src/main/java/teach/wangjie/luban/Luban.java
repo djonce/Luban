@@ -1,24 +1,18 @@
-package teach.wangj.luban;
+package teach.wangjie.luban;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.ExifInterface;
-import android.support.annotation.NonNull;
-import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-/**
- * Contact: 20903213@qq.com Zengweizhou
- */
-public class Luban {
 
-    private static final String TAG = Luban.class.getSimpleName();
+public class Luban {
 
     public static final int FIRST_GEAR = 1;
 
@@ -73,9 +67,6 @@ public class Luban {
             }
             return result;
         }
-        if (Log.isLoggable(TAG, Log.ERROR)) {
-            Log.e(TAG, "default disk cache dir is null");
-        }
         return null;
     }
 
@@ -118,7 +109,7 @@ public class Luban {
         executor.shutdownNow();
     }
 
-    private File thirdCompress(@NonNull String filePath) {
+    private File thirdCompress(String filePath) {
         String thumb = mCacheDir.getAbsolutePath() + "/" + System.currentTimeMillis();
 
         double scale;
@@ -172,7 +163,7 @@ public class Luban {
         return compress(filePath, thumb, thumbW, thumbH, angle, (long) scale);
     }
 
-    private File firstCompress(@NonNull File file) {
+    private File firstCompress(File file) {
         int minSize = 60;
         int longSide = 720;
         int shortSide = 1280;
